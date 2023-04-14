@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Post.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Post.Api.Controllers.V1.ManageController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.ManageController.#ctor(MediatR.IMediator)">
+            <summary>
+            Manage Users And Roles
+            </summary>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.ManageController.CreateUser(Post.Application.Features.v1.Users.Command.CreateUserCommand)">
+            <summary>
+            register new user
+            </summary>
+            <param name="command">CreateUserCommand model</param>
+            <returns> UserName , UserId</returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.ManageController.RefreshToken(Post.Application.Features.v1.Users.Command.RefreshTokens.RefreshTokenCommand)">
+            <summary>
+            Get RefreshToken For 7 month
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.ManageController.LoginUser(Post.Application.Features.v1.Users.Command.LoginUserCommand)">
+            <summary>
+            Login user to system
+            </summary>
+            <param name="command"> UserName or Email , UserId</param>
+            <returns>UserName , UserId</returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.ManageController.GetAllUsers">
+            <summary>
+            Get List of Users
+            </summary>
+            <returns>List of Users</returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.ManageController.UserInfo">
+            <summary>
+            Get Logged UserInfo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.ManageController.GetAllRoles">
+            <summary>
+            Get List of Roles
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.ManageController.AllUserRoles(System.String)">
+            <summary>
+            Get User Roles List
+            </summary>
+            <param name="id">UserId as string</param>
+            <returns>User Roles List</returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.ManageController.AddUserToRole(Post.Application.Features.v1.Roles.Command.AddUserToRole.AddUserToRoleCommand)">
+            <summary>
+            Add User To Role
+            </summary>
+            <param name="command"></param>
+            <returns>message sccuss</returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.ManageController.CreateRole(Post.Application.Features.v1.Roles.Command.CreateRole.CreateRoleCommand)">
+            <summary>
+            Create new role
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.ManageController.RemoveUserFromRole(Post.Application.Features.v1.Roles.Command.RemoveUserFromRole.RemoveUserRoleCommand)">
+            <summary>
+            Remove User from Role
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.PostController.#ctor(MediatR.IMediator)">
+            <summary>
+            
+            </summary>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.PostController.CreatePost(Post.Application.Features.v1.Post.Command.Create.CreatePostCommand)">
+            <summary>
+            Create New Post (Need User Authorize)
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.PostController.GetAllPosts">
+            <summary>
+            List of Post (Need Admin Authorize)
+            </summary>
+            <returns></returns>
+            [Authorize(Roles = "Admin")]
+        </member>
+        <member name="M:Post.Api.Controllers.V1.PostController.GetAllPostsIsBlocked">
+            <summary>
+            List of blocked Post (Need Admin Authorize)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.PostController.BlockPost(Post.Application.Features.v1.Post.Command.Update.BlockPostCommand)">
+            <summary>
+            Block Post (Need Admin Authorize)
+            </summary>
+            <param name="cmd"></param>
+            <returns>No Content</returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.PostController.Update(Post.Application.Features.v1.Post.Command.Update.UpdateForSameUser.UpdateUserPostCommand)">
+            <summary>
+            Update : user can update his post text
+            </summary>
+            <param name="cmd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Post.Api.Controllers.V1.ServerDetailsController.GetDate">
+            <summary>
+            Get Server Dates Types
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Post.Api.Extensions.Extensions.GetUserId(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

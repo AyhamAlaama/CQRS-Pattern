@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Features\v1\Post\Command\Delete\**" />
+    <EmbeddedResource Remove="Features\v1\Post\Command\Delete\**" />
+    <None Remove="Features\v1\Post\Command\Delete\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\v1\Comment\Command\Create\" />
+    <Folder Include="Features\v1\Comment\Command\Delete\" />
+    <Folder Include="Features\v1\Comment\Command\Update\" />
+    <Folder Include="Features\v1\Comment\Query\FetchAll\" />
+    <Folder Include="Features\v1\Comment\Query\FetchOne\" />
+    <Folder Include="Features\v1\Post\Query\FetchAllPosts\PostIsNotBlocked\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Post.Domain\Post.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
