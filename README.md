@@ -1,6 +1,8 @@
 # Sample Asp.Net Core 6, Restful WebApi
 
 # Include:
+. CQRS Pattern
+
 . Repository pattern
 
 . AutoMapper lib
