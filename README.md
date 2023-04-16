@@ -3,7 +3,7 @@
 # Include:
 . CQRS Pattern
 
-. Repository pattern
+. Generic Repository pattern
 
 . AutoMapper lib
 
