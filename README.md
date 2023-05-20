@@ -16,8 +16,10 @@
 . Entityframework core Sqlite
 
 # Install
-. Download .Net sdk version 6.0.0 or 6.0.10 from: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
-
+. Download .Net sdk version 6.0.0 or 6.0.10 from:
+```
+https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+```
 . Clone Repository or Download src.zip file
 
 . Open post.api directory using cmd
